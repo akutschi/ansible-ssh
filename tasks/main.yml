@@ -1,0 +1,51 @@
+---
+# tasks file for ansible-ssh
+
+- name: Install ufw
+  yum:
+    name:
+      - ufw
+    state: present
+    update_cache: yes
+
+- name: Modify ufw for ssh
+  ufw:
+    rule: allow
+    to_port: '22'
+    proto: tcp
+    state: enabled
+
+- name: Install fail2ban
+  apt:
+    name: fail2ban
+    state: present
+    update_cache: yes
+
+- name: Config fail2ban for ssh
+  blockinfile:
+    path: /etc/fail2ban/jail.local
+    create: yes
+    block: |
+      [DEFAULT]
+      bantime = 666
+      
+      [sshd]
+      enabled = true
+  notify:
+    - Enable and restart fail2ban
+
+- name: Permit ssh root access with key only
+  replace:
+    path: /etc/ssh/sshd_config
+    regexp: '.?PermitRootLogin[ \t]+(?:yes\b|no\b)'
+    replace: 'PermitRootLogin prohibit-password'
+  notify:
+    - Restart SSH
+
+- name: Disable password authentication for SSH
+  replace:
+    path: /etc/ssh/sshd_config
+    regexp: '.?PasswordAuthentication[ \t]+(?:yes\b|no\b)'
+    replace: 'PasswordAuthentication no'
+  notify:
+    - Restart SSH

@@ -1,0 +1,13 @@
+---
+# handlers file for ansible-ssh
+
+- name: Restart SSH
+  systemd: 
+    state: restarted
+    name: sshd
+
+- name: Enable and restart fail2ban
+  systemd: 
+    enabled: yes
+    state: restarted
+    name: fail2ban
