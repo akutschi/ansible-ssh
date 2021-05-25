@@ -8,6 +8,7 @@
       - openssh-server
       - iproute2
       - procps
+      - kmod
     state: present
     update_cache: yes
 
