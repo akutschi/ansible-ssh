@@ -3,7 +3,7 @@ name: Molecule
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   test:
