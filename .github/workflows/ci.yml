@@ -36,8 +36,8 @@ jobs:
         distro:
           - ubuntu2004
         ansible-version:
-          #- 2.9
-          #- 3
+          - 2.9
+          - 3
           - 4
         python-version:
           #- 3.8
