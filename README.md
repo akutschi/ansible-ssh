@@ -8,8 +8,16 @@ Password logins are for all users disabled.
 
 ## Requirements
 
-- This version requires Ubuntu 20.04 LTS
-- Ansible 2.9.x, this role is **not tested with Ansible 2.10** yet.
+- Operating System
+  - Ubuntu 20.04 LTS or
+  - Debian 10
+- Ansible
+  - 2.9.x or
+  - 3.x or
+  - 4.x 
+- Python
+  - 3.8 or
+  - 3.9
 
 ## Role Variables
 
@@ -28,7 +36,7 @@ Just clone or download this role into your `roles` folder and set up the playboo
 ---
 - hosts: servers
   roles:
-      - ansible-ssh
+      - ansible_ssh
 ```
 
 # License
