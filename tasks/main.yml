@@ -6,6 +6,8 @@
     name:
       - ufw
       - openssh-server
+      - iproute2
+      - procps
     state: present
     update_cache: yes
 
