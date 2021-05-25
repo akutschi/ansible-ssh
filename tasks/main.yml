@@ -5,7 +5,6 @@
   apt:
     name:
       - ufw
-      - iptables
       - openssh-server
     state: present
     update_cache: yes
