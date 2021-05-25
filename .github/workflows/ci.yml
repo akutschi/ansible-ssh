@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  schedule:
+    # Run every Wednesday, 2:20 PM UTC
+    - cron: '20 14 * * 3'
 
 jobs:
 
