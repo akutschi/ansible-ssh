@@ -6,11 +6,22 @@
     name:
       - ufw
       - openssh-server
-      - iproute2
-      - procps
-      - kmod
     state: present
     update_cache: yes
+
+- name: Update default configuration
+  template:
+    src: ufw.j2
+    dest: /etc/default/ufw
+    owner: root
+    group: root
+    mode: 0644 
+  register: ufw_config
+
+- name: Reset to default configuration
+  ufw:
+    state: reset
+  when: ufw_config is changed
 
 - name: Modify ufw for ssh
   ufw:

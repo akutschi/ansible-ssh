@@ -1,3 +1,5 @@
 ---
 - name: Verify
   hosts: all
+  become: true
+  tasks: 
