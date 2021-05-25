@@ -9,11 +9,6 @@
     state: present
     update_cache: yes
 
-- name: Start ufw
-  systemd: 
-    state: started
-    name: ufw
-
 - name: Modify ufw for ssh
   ufw:
     rule: allow
