@@ -10,6 +10,12 @@ Password logins are for all users disabled.
 
 ## Requirements
 
+This role does not have any requirements.
+
+## Coverage
+
+Any combination of the following is tested:
+
 - Operating System
   - Ubuntu 20.04 LTS or
   - Debian 10
