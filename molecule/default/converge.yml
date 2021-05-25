@@ -2,5 +2,7 @@
 - name: Converge
   hosts: all
   become: yes
-  roles:
-    - role: ansible-ssh
+  tasks:
+    - name: Include role
+      include_role: 
+        name: ansible_ssh
