@@ -1,10 +1,11 @@
 ---
 # tasks file for ansible-ssh
 
-- name: Install ufw
+- name: Install ufw and OpenSSH server
   apt:
     name:
       - ufw
+      - openssh-server
     state: present
     update_cache: yes
 
