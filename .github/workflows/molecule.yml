@@ -32,7 +32,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip3 install wheel
-          pip3 install ansible==${{ matrix.ansible-version }}.* molecule[docker] yamllint ansible-lint
+          pip3 install ansible==${{ matrix.ansible-version }}.* molecule[docker] docker yamllint ansible-lint
 
       - name: Run Molecule tests.
         run: molecule test
