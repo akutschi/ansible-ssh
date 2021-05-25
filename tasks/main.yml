@@ -9,19 +9,17 @@
     state: present
     update_cache: yes
 
-- name: Update default configuration
+- name: Update default ufw configuration
   template:
     src: ufw.j2
     dest: /etc/default/ufw
     owner: root
     group: root
     mode: 0644 
-  register: ufw_config
+  notify: Restart ufw
 
-- name: Reset to default configuration
-  ufw:
-    state: reset
-  when: ufw_config is changed
+- name: Flush handlers
+  meta: flush_handlers 
 
 - name: Modify ufw for ssh
   ufw:
