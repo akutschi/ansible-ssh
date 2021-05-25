@@ -1,5 +1,7 @@
 # Ansible SSH
 
+[![Molecule](https://github.com/akutschi/ansible_ssh/actions/workflows/ci.yml/badge.svg)](https://github.com/akutschi/ansible_ssh/actions/workflows/ci.yml)
+
 This is a very simple role to configure SSH. 
 Root access is enabled but permitted with key only. 
 Password logins are for all users disabled.
