@@ -38,6 +38,7 @@
   blockinfile:
     path: /etc/fail2ban/jail.local
     create: yes
+    mode: 0644
     block: |
       [DEFAULT]
       bantime = 666
