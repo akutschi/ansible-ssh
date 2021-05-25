@@ -5,7 +5,7 @@ driver:
   name: docker
 lint: |
   set -e
-  yamllint .
+  yamllint ./tasks/main.yml 
   ansible-lint
 platforms:
   - name: instance
