@@ -2,7 +2,7 @@
 # tasks file for ansible-ssh
 
 - name: Install ufw
-  yum:
+  apt:
     name:
       - ufw
     state: present
