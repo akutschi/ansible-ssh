@@ -10,6 +10,9 @@ galaxy_info:
   - name: Ubuntu
     versions:
       - 20.04
+  - name: Debian
+    versions:
+      - 10
 
   galaxy_tags:
     - ssh
