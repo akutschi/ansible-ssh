@@ -29,7 +29,9 @@ Any combination of the following is tested:
 
 ## Role Variables
 
-There are no settable variables in this role.
+The role itself does not have any settable variables. 
+But the dependency has variables.
+Check the [README](https://github.com/akutschi/ansible_ufw) of Ansible UFW for the role variables.
 
 ## Dependencies
 
