@@ -1,2 +1,2 @@
 ---
-ufw_etc_default_ipv6: no
+ufw_ipv6: no
