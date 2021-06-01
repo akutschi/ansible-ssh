@@ -6,11 +6,6 @@
     state: restarted
     name: sshd
 
-- name: Restart ufw
-  systemd: 
-    state: restarted
-    name: ufw
-  
 - name: Enable and restart fail2ban
   systemd: 
     enabled: yes

@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/akutschi/ansible_ssh_hardening/actions/workflows/ci.yml/badge.svg)](https://github.com/akutschi/ansible_ssh_hardening/actions/workflows/ci.yml)
 
-This is a very simple role to configure SSH. 
+This is a very simple role to configure SSH and [fail2ban](https://en.wikipedia.org/wiki/Fail2ban).
 Root access is enabled but permitted with key only. 
 Password logins are for all users disabled.
 
@@ -33,7 +33,7 @@ There are no settable variables in this role.
 
 ## Dependencies
 
-This role does not have any dependencies.
+This role depends on [Ansible UFW](https://github.com/akutschi/ansible_ufw) and will be installed as dependency. 
 
 ## Example Playbook
 
@@ -44,7 +44,7 @@ Just clone or download this role into your `roles` folder and set up the playboo
 ---
 - hosts: servers
   roles:
-      - ansible_ssh
+      - ansible_ssh_hardening
 ```
 
 # License

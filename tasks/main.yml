@@ -1,25 +1,12 @@
 ---
 # tasks file for ansible-ssh
 
-- name: Install ufw and OpenSSH server
+- name: Install OpenSSH server
   apt:
     name:
-      - ufw
       - openssh-server
     state: present
     update_cache: yes
-
-- name: Update default ufw configuration
-  template:
-    src: ufw.j2
-    dest: /etc/default/ufw
-    owner: root
-    group: root
-    mode: 0644 
-  notify: Restart ufw
-
-- name: Flush handlers
-  meta: flush_handlers 
 
 - name: Modify ufw for ssh
   ufw:
