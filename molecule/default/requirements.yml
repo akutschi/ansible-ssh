@@ -1,0 +1,5 @@
+---
+roles:
+  - name: ansible_ufw
+    src: https://github.com/akutschi/ansible_ufw.git
+    version: v0.0.1
