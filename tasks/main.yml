@@ -1,16 +1,11 @@
 ---
 # tasks file for ansible_ssh_hardening
 
-- name: Install OpenSSH server
+- name: Install OpenSSH server and fail2ban
   apt:
     name:
       - openssh-server
-    state: present
-    update_cache: yes
-
-- name: Install fail2ban
-  apt:
-    name: fail2ban
+      - fail2ban
     state: present
     update_cache: yes
 
