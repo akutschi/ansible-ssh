@@ -1,2 +1,2 @@
 ---
-# defaults file for ansible-ssh
+# defaults file for ansible_ssh_hardening

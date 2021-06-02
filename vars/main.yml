@@ -1,2 +1,2 @@
 ---
-# vars file for ansible-ssh
+# vars file for ansible_ssh_hardening
